@@ -101,6 +101,12 @@ section{
     color: #fff;
     width: 70%;
     margin-top: 50px;
+    display: none;
+}
+
+.home .content.active {
+
+    display: block;
 }
 
 .home .content h1 {
@@ -127,7 +133,7 @@ section{
 .home .content a {
 
     background: #fff;
-    padding: 15px 35px;
+    padding: 10px 22px;
     color: #1680AC;
     font-size: 1.1em;
     font-weight: 500;
@@ -221,7 +227,7 @@ section{
 .video-slide.active {
 
     clip-path: circle(150% at 0 50%);
-    transition: 2s ease;
+    transition: 0.5s ease;
     transition-property: clip-path;
 }
 
