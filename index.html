@@ -3,36 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOKAT WEBSITE DESIGN</title>
+    <title>GÜZEL TOKAT</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
     
     <header>
-        <a href="#" class="brand">Tokat</a>
+        <a href="#" class="brand">TOKATTA YAŞAM</a>
+        <div class="menu-btn"> </div>
         <div class="navigation">
             <div class="navigation-items">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Explore</a>
-                <a href="#">Gallery</a>
-                <a href="#">Contact</a>
+                <a href="#">Anasayfa</a>
+                <a href="#">Hakkında</a>
+                <a href="#">Keşfet</a>
+                <a href="#">Galeri</a>
+                <a href="#">İletişim</a>
             </div>
         </div>
     </header>
 
     <section class="home">
 
+        <video class="video-slide active" src="yayla.mov" autoplay muted loop> </video>
+        <video class="video-slide" src="yayla2.mov" autoplay muted loop> </video>
+        <video class="video-slide" src="almus.mov" autoplay muted loop> </video>
+        <video class="video-slide" src="tomara.mov" autoplay muted loop> </video>
+        <video class="video-slide" src="yayla.mov" autoplay muted loop> </video>
+
+        <div class="content active">
+            <h1>DUMANLI <br><span>YAYLASI</span></h1>
+            <p>Tokat'ın Almus ilçesinde bulunan Dumanlı Yaylası,
+                 genellikle doğa ve yayla turizmi için tercih edilen bir bölgedir.
+                  Dumanlı Yaylası, güzel doğa manzaraları, temiz havası 
+                  ve yayla yaşamının keyfini sürmek isteyen ziyaretçiler için çekici bir destinasyondur.
+                  Yayla ziyaretçileri, yöresel mutfağın tadını çıkarabilirler. 
+                  Yerel ürünlerle yapılan yöresel yemekler,
+                   ziyaretçilere otantik bir deneyim sunabilir.</p>
+            <a href="#">Daha Fazla</a>
+        </div>
         <div class="content">
-            <h1>Wonderful. <br><span>Place</span></h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                 Eaque nulla temporibus recusandae, dolore, sapiente labore quia,
-                  officiis aliquam pariatur ipsum non voluptate fugit explicabo. 
-                  In dignissimos quia vel! Id, impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Eaque nulla temporibus recusandae, dolore, sapiente labore quia,
-                   officiis aliquam pariatur ipsum non voluptate fugit explicabo. 
-                   In dignissimos quia vel! Id, impedit!</p>
+            <h1>TOKAT<br><span>ORMANLARI</span></h1>
+            <p>Yayla, çevresindeki dağlar, ormanlar ve yayla bitki örtüsü ile çevrili.
+                 Bu nedenle, bölge, ziyaretçilere doğal güzelliklerle dolu bir ortam sunar.
+                  Yaylanın etkileyici manzaraları, trekking ve doğa yürüyüşleri için idealdir.</p>
+            <a href="#">Daha Fazla</a>
+        </div>
+        <div class="content">
+            <h1>ALMUS<br><span>BARAJI</span></h1>
+            <p>Almus baraj golü Tokatlıların olduğu kadar çevre illerdende gelip günübirlik piknik yapılabilecek bir doğa harikası. 
+                Bilhassa ormanevinde çam ormanlarının arasında sakin ortamda piknik yapmak ayrı bir keyifli. 
+                Tokat a geldiyseniz mutlaka ziyaret edin. Her mevsimin zevki farklı,her mevsim güzel.</p>
+            <a href="#">Daha Fazla</a>
+        </div>
+        <div class="content">
+            <h1>TOMARA. <br><span>Yada ARISU</span></h1>
+            <p>Köyün adı, 1522 kayıtlarında Tomara, 1916 kayıtlarında Türk Tomara olarak geçmektedir.
+                 Şimdilerde ise Arısu deniliyor. Arısunun güzellikleri saymakla bitmez. 
+                 Yeşilliği, dağları, ormanları, yayları ve birçok doğa güzellikleri...</p>
+            <a href="#">Daha Fazla</a>
+        </div>
+        <div class="content">
+            <h1>YEŞİLİN <br><span>DERİNLERİNDE</span></h1>
+            <p>Dumanlı Yaylası, geleneksel yayla hayatının izlerini taşır.
+                 Ziyaretçiler, bölgenin yerel kültürünü deneyimleyerek,
+                  yayla evlerinde konaklama imkanı bulabilirler.
+                   Yayla sakinleri genellikle hayvancılık ve tarım faaliyetleriyle uğraşır.</p>
             <a href="#">Daha Fazla</a>
         </div>
         <div class="media-icons">
@@ -40,6 +76,62 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+
+    <script type="text/javascript">
+        //javascript codes for responsive navigation menu
+
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click",() => {
+
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+
+
+        //javascript codes for video slider navigation
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function(manual) {
+            btns.forEach((btn) =>{ 
+            btn.classList.remove("active"); 
+        });
+
+            slides.forEach((slide) =>{   
+            slide.classList.remove("active"); 
+        });
+
+            contents.forEach((content) =>{   
+            content.classList.remove("active"); 
+        });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+
+    </script>
+    
+
 
 </body>
 </html>
